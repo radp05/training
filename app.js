@@ -4,7 +4,8 @@ const app = express()
 const server = require("http").createServer(app)
 const io = require("socket.io")(server)
 
-const PORT = process.env.port || 3004
+const PORT = process.env.PORT|| 3004
+
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/socket-client.html")
